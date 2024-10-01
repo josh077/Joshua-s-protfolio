@@ -183,6 +183,38 @@
             line-height: 1.5;
         }
 
+        /* Skills Section */
+        .skills-section {
+            margin: 80px 84px;
+        }
+        .skills-section h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+        .skills-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .skill-card {
+            background-color: rgb(8, 8, 77);
+            width: 30%;
+            padding: 20px;
+            border-radius: 15px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+        .skill-card h3 {
+            margin: 20px 0;
+            color: #ffffff;
+        }
+        .skill-card p {
+            color: lightgray;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
         footer{
             background-color: #0e0e1a;
         }
@@ -263,6 +295,7 @@
                     <li><a href="/">Home</a></li>
                     <li><a href="/">About</a></li>
                     <li><a href="/">Projects</a></li>
+                    <li><a href="/">Skills</a></li>
                     <li><a href="https://www.linkedin.com/in/joshua-gadipe-26a844196">Contact me</a></li>
                 </ul>
             </div>
@@ -325,6 +358,37 @@
                     <img src="project3.png" alt="Project 3">
                     <h3>Project Three</h3>
                     <p>To integrate PayPal payments in Spring Boot, add PayPal SDK dependencies, create a PayPalConfig class for API credentials, and implement a service to handle transactions. Use PayPal's REST API for payment processing. Set up a controller to create and execute payments, handling redirects for successful and failed transactions and deployed it on AWS.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills-section">
+            <h1>Skills</h1>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <h3>Java</h3>
+                    <p>Proficient in Java programming language, with experience in object-oriented programming and software development principles.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Spring Boot</h3>
+                    <p>Knowledge of building microservices and RESTful APIs using Spring Boot, with a focus on developing robust backend applications.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>MERN Stack</h3>
+                    <p>Experience with the MERN stack (MongoDB, Express, React, Node.js) for building full-stack web applications.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Version Control</h3>
+                    <p>Familiar with Git for version control and collaboration on software development projects.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Agile Methodology</h3>
+                    <p>Understanding of Agile development practices, including Scrum and Kanban.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Problem Solving</h3>
+                    <p>Strong analytical and problem-solving skills, with a focus on delivering high-quality code.</p>
                 </div>
             </div>
         </section>
