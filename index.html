@@ -234,6 +234,48 @@
             color: gray;
             padding: 12px 0;
         }
+        .experience-section {
+        margin: 80px 84px;
+    }
+    .experience-section h1 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    .experience-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .experience-card {
+        background-color: rgb(8, 8, 77);
+        width: 30%;
+        padding: 20px;
+        border-radius: 15px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+    .experience-card img {
+        width: 100%;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+    .experience-card:hover {
+        transform: translateY(-10px);
+        background-color: #121248;
+    }
+    .experience-card:hover img {
+        transform: scale(1.05);
+    }
+    .experience-card h3 {
+        margin: 20px 0;
+        color: #ffffff;
+    }
+    .experience-card p {
+        color: lightgray;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
         @media screen and (max-width: 1400px) {
             .box{
                 flex-direction: column;
@@ -294,12 +336,12 @@
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="/">About</a></li>
-                    <li><a href="/">Projects</a></li>
-                    <li><a href="/">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li> <!-- Added link to Projects -->
+                    <li><a href="#skills">Skills</a></li>   <!-- Added link to Skills -->
                     <li><a href="https://www.linkedin.com/in/joshua-gadipe-26a844196">Contact me</a></li>
                 </ul>
             </div>
-        </nav>
+        </nav>        
     </header>
 
     <main>
@@ -333,7 +375,7 @@
         <hr>
 
         <!-- Projects Section -->
-        <section class="projects-section">
+        <section class="projects-section" id="projects">
             <h1>Projects</h1>
             <div class="projects-container">
                 <div class="project-card">
@@ -363,51 +405,111 @@
         </section>
 
         <!-- Skills Section -->
-        <section class="skills-section">
-            <h1>Skills</h1>
-            <div class="skills-container">
-                <div class="skill-card">
-                    <h3>Java</h3>
-                    <p>Proficient in Java programming language, with experience in object-oriented programming and software development principles.</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Spring Boot</h3>
-                    <p>Knowledge of building microservices and RESTful APIs using Spring Boot, with a focus on developing robust backend applications.</p>
-                </div>
-                <div class="skill-card">
-                    <h3>MERN Stack</h3>
-                    <p>Experience with the MERN stack (MongoDB, Express, React, Node.js) for building full-stack web applications.</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Version Control</h3>
-                    <p>Familiar with Git for version control and collaboration on software development projects.</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Agile Methodology</h3>
-                    <p>Understanding of Agile development practices, including Scrum and Kanban.</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Problem Solving</h3>
-                    <p>Strong analytical and problem-solving skills, with a focus on delivering high-quality code.</p>
-                </div>
-            </div>
-        </section>
+        <!-- Skills Section -->
+<section class="skills-section" id="skills">
+    <h1>Skills</h1>
+    <div class="skills-container">
+        <!-- Skill Card 1: Java -->
+        <div class="skill-card">
+            <img src="java.png" alt="Java Logo" class="skill-image">
+            <h3>Java</h3>
+            <p>Proficient in Java programming language, with experience in object-oriented programming and software development principles.</p>
+        </div>
+        
+        <!-- Skill Card 2: Spring Boot -->
+        <div class="skill-card">
+            <img src="spring.png" alt="Spring Boot Logo" class="skill-image">
+            <h3>Spring Boot</h3>
+            <p>Knowledge of building microservices and RESTful APIs using Spring Boot, with a focus on developing robust backend applications.</p>
+        </div>
 
-        <section class="SecondSection">
-            <span class="text-gray">What I have done so far</span>
-            <h1>Work Experience</h1>
+        <!-- Skill Card 3: MERN Stack -->
+        <div class="skill-card">
+            <img src="mern-logo.png" alt="MERN Logo" class="skill-image">
+            <h3>MERN Stack</h3>
+            <p>Experience with the MERN stack (MongoDB, Express, React, Node.js) for building full-stack web applications.</p>
+        </div>
 
-            <div class="box">
-                <div class="vertical">
-                    <img class="image-top" src="Developer.png" alt="Developer Icon">
-                    <div class="vertical-text">
-                        Java Backend Dev (Internship)
-                    </div>
-                    <div class="vertical-desc"></div>
-                </div>
-                <div class="vertical"></div>
-            </div>
-        </section>
+        <!-- Skill Card 4: Version Control -->
+        <div class="skill-card">
+            <img src="version.png" alt="Git Logo" class="skill-image">
+            <h3>Version Control</h3>
+            <p>Familiar with Git for version control and collaboration on software development projects.</p>
+        </div>
+
+        <!-- Skill Card 5: Agile Methodology -->
+        <div class="skill-card">
+            <img src="agile.png" alt="Agile Logo" class="skill-image">
+            <h3>Agile Methodology</h3>
+            <p>Understanding of Agile development practices, including Scrum and Kanban.</p>
+        </div>
+
+        <!-- Skill Card 6: Problem Solving -->
+        <div class="skill-card">
+            <img src="problem-solving-logo.png" alt="Problem Solving Icon" class="skill-image">
+            <h3>Problem Solving</h3>
+            <p>Strong analytical and problem-solving skills, with a focus on delivering high-quality code.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Add the following CSS within your existing <style> block -->
+
+<style>
+    .skill-card {
+        position: relative;
+        background-color: rgb(8, 8, 77);
+        width: 30%;
+        padding: 20px;
+        border-radius: 15px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        text-align: center; /* Aligns content center */
+    }
+
+    .skill-card:hover {
+        transform: translateY(-10px);
+        background-color: #121248;
+    }
+
+    .skill-image {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 20px;
+        transition: transform 0.3s ease;
+    }
+
+    .skill-card:hover .skill-image {
+        transform: scale(1.1); /* Slight zoom on hover */
+    }
+
+    .skill-card h3 {
+        margin: 20px 0;
+        color: #ffffff;
+    }
+
+    .skill-card p {
+        color: lightgray;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+</style>
+
+
+<section class="experience-section" id="experience">
+    <h1>Work Experience</h1>
+    <div class="experience-container">
+        <div class="experience-card">
+            <img src="developer.png" alt="Java Backend Developer Image">
+            <h3>Java Backend Developer Intern</h3>
+            <p>• Developed robust backend systems using Java and Spring Boot.  
+               • Integrated REST APIs for various functionalities.  
+               • Collaborated with cross-functional teams to design and develop features.  
+               • Enhanced the performance of backend systems through code optimization.</p>
+        </div>
+        
+    </div>
+</section>
     </main>
 
     <footer>
@@ -438,7 +540,7 @@
             </div>
         </div>
         <div class="footer-rights">
-            Copyrights &#169; www.joshuasportfolio.com | All rights reserved
+            Copyrights &#169; joshuasportfolio | All rights reserved
         </div>
     </footer>
 
