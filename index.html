@@ -90,6 +90,19 @@
         #element{
             color: blue;
         }
+        .profileSection{
+            margin: 60px 84px;
+            text-align: center;
+        }
+        .profileSection h1{
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .profileSection p{
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: lightgray;
+        }
         .SecondSection{
             max-width: 80vw;
             margin: auto;
@@ -125,6 +138,51 @@
         .vertical-desc{
             position: relative;
         }
+        
+        /* Projects Section */
+        .projects-section {
+            margin: 80px 84px;
+        }
+        .projects-section h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+        .projects-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .project-card {
+            background-color: rgb(8, 8, 77);
+            width: 30%;
+            padding: 20px;
+            border-radius: 15px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+        .project-card img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            background-color: #121248;
+        }
+        .project-card:hover img {
+            transform: scale(1.05);
+        }
+        .project-card h3 {
+            margin: 20px 0;
+            color: #ffffff;
+        }
+        .project-card p {
+            color: lightgray;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
         footer{
             background-color: #0e0e1a;
         }
@@ -230,7 +288,45 @@
                 <img src="PngItem_1127587.png" alt="Profile Image">
             </div>
         </section>
+
+        <!-- Profile Section -->
+        <section class="profileSection">
+            <h1>Profile</h1>
+            <p>
+                I am a dedicated Web Developer and Cybersecurity enthusiast with a passion for problem-solving and building secure, scalable applications.
+                With expertise in Java, backend development, and bug bounty hunting, I focus on delivering efficient solutions to complex technical challenges.
+            </p>
+        </section>
+
         <hr>
+
+        <!-- Projects Section -->
+        <section class="projects-section">
+            <h1>Projects</h1>
+            <div class="projects-container">
+                <div class="project-card">
+                    <img src="project1-image.jpg" alt="Project 1">
+                    <h3>Project One</h3>
+                    <p>A CRUD API backend application enables Create, Read, Update, and
+                        Delete operations on a data model. It typically uses HTTP methods
+                        (POST, GET, PUT, DELETE) to handle requests, interfacing with a
+                        database to store and manage data. This backend ensures data integrity,
+                        security, and efficiency for web or mobile applications. The API can be
+                        integrated with frontend interfaces to provide seamless user interaction.</p>
+                </div>
+                <div class="project-card">
+                    <img src="project2-image.jpg" alt="Project 2">
+                    <h3>Project Two</h3>
+                    <p>Designed and implemented a cybersecurity tool to analyze vulnerabilities in web applications.</p>
+                </div>
+                <div class="project-card">
+                    <img src="project3-image.jpg" alt="Project 3">
+                    <h3>Project Three</h3>
+                    <p>Created a real-time chat application using WebSockets and deployed it on AWS.</p>
+                </div>
+            </div>
+        </section>
+
         <section class="SecondSection">
             <span class="text-gray">What I have done so far</span>
             <h1>Work Experience</h1>
@@ -247,6 +343,7 @@
             </div>
         </section>
     </main>
+
     <footer>
         <div class="footer">
             <div class="footer-first">
@@ -278,6 +375,7 @@
             Copyrights &#169; www.joshuasportfolio.com | All rights reserved
         </div>
     </footer>
+
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed('#element', {
