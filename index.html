@@ -368,6 +368,33 @@
 .contact-form button:hover {
     background-color: #121248;
 }
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Gradient effect */
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    position: relative;
+}
+
+/* Particle effect */
+body::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 150%;
+    height: 150%;
+    background: url('https://www.abusaid.me/images/hero-circle.png') repeat;
+    opacity: 0.03; /* Light opacity for subtle effect */
+    z-index: 0;
+}
+
+main, nav, footer {
+    position: relative;
+    z-index: 1; /* Ensures content is above the particle effect */
+}
+
 
 
         @media screen and (max-width: 1400px) {
